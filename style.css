@@ -1,0 +1,87 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+}
+
+/* Container for buttons */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Button styles */
+button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+/* Default button appearance */
+button {
+    background-color: #ff7eb3;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #ff5699;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Active effect */
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Section for dynamic content */
+.dynamic-content {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.dynamic-content.show {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
